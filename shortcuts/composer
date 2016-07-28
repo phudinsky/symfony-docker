@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+docker run --rm \
+     --user $(id -u) \
+     -v $(pwd)/symfony:/app \
+     -v ~/.composer:/composer \
+     -v ~/.ssh:/root/.ssh \
+     composer/composer:php5 $@
