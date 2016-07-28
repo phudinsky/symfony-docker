@@ -1,0 +1,28 @@
+version: "2"
+
+services:
+    php:
+        build: '.'
+        depends_on:
+            - database
+        environment:
+            - SYMFONY_ENV=prod
+            - SYMFONY__DATABASE__USER=${DB_USER}
+            - SYMFONY__DATABASE__NAME=${DB_NAME}
+            - SYMFONY__DATABASE__PASS=${DB_PASS}
+            - SYMFONY__APP__SECRET=${APP_SECRET}
+
+    front:
+        build: 'front'
+        depends_on:
+            - php
+
+    database:
+        build: 'database'
+        ports:
+            - "3306:3306"
+        environment:
+            - MYSQL_ROOT_PASSWORD=${DB_PASS}
+            - MYSQL_DATABASE=${DB_NAME}
+            - MYSQL_USER=${DB_USER}
+            - MYSQL_PASSWORD=${DB_PASS}
