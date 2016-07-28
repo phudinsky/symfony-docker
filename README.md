@@ -1,5 +1,5 @@
 #About
-This repository is based on [intellectsoft-uk/symfony-skeleton](https://github.com/intellectsoft-uk/symfony-skeleton), but adapted for Symfony 2.8
+This repository is based on [intellectsoft-uk/symfony-skeleton](https://github.com/intellectsoft-uk/symfony-skeleton), and adapted for Symfony 2.8
 
 
 #Required software
