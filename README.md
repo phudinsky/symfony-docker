@@ -7,8 +7,13 @@ This repository is based on [intellectsoft-uk/symfony-skeleton](https://github.c
 * Docker-compose 1.7+
 * Docker-machine 0.7+
 
-#Usage
-* Put you project under symfony sub-folder
+#Example of usage
+* Clone project `git clone https://github.com/phudinsky/symfony-docker`
+* Go to created directory `cd symfony-docker`
+* Clone your project `git clone https://github.com/phudinsky/some-project symfony`
+* Run `shortcuts/composer install` command to install dependecies
 * Update parameters using env variables from .env file
-* Run composer install, doctrine migrate and other commands
-* run docker-compose up
+* Run `docker-compose up -d`
+* Run `shortcuts/console doctrine:database:create` to create database
+* Run `shortcuts/console doctrine:migrations:migrate` to run migration scripts
+* Run `shortcuts/console doctrine:fixtures:load` to load base data
